@@ -14,7 +14,7 @@ const SubjectSchema = new mongoose.Schema({
         required: true
     },
     percentage: {
-        type: String,
+        type: Number,
         required: true
     }
 });
