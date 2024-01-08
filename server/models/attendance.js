@@ -13,6 +13,10 @@ const SubjectSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    percentage: {
+        type: String,
+        required: true
+    }
 });
 
 const SubjectModel = mongoose.model('Subject', SubjectSchema)
