@@ -1,3 +1,4 @@
+const mongoose  = require('mongoose');
 const SubjectModel = require('../models/attendance');
 
 exports.saveSubject = async (subject) => {
@@ -10,6 +11,22 @@ exports.saveSubject = async (subject) => {
     });
 
     return subjectToSave.save()
-}
+};
 
-exports.updateTotalLecute
+exports.updateAttendance = async (attendance, subjectId) => {
+    try {
+        const updatedSubject = await SubjectModel.findByIdAndUpdate(
+            subjectId,
+            { $set: {
+                totalLectures: attendance.totalLectures,
+                attendedLectures: attendance.attendedLectures,
+                percentage: attendance.percentage
+            }},
+            { new: true }
+        );
+
+        return updatedSubject;
+    } catch (error) {
+        throw new Error('unable to update the mongo');
+    }
+};
