@@ -30,3 +30,13 @@ exports.updateAttendance = async (attendance, subjectId) => {
         throw new Error('unable to update the mongo');
     }
 };
+
+exports.deleteSubject = async (subjectId) => {
+    try {
+        const deleted = await SubjectModel.findByIdAndDelete(subjectId)
+
+        return deleted;
+    } catch (error) {
+        throw new Error("unable to delete from mongo")
+    }
+};

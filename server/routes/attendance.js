@@ -4,5 +4,6 @@ const attendanceController = require('../controllers/attendanceController');
 
 router.post('/addSubject', attendanceController.addSubject);
 router.post('/updateAttendance', attendanceController.updateAttendance);
+router.delete('/deleteSubject', attendanceController.deleteSubject);
 
 module.exports = router;

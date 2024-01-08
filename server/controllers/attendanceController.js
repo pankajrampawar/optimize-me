@@ -11,7 +11,7 @@ exports.addSubject = async (req, res) => {
     } catch (error) {
         res.status(500).json({message: "internal server error", error});
     }   
-}
+};
 
 exports.updateAttendance = async (req, res) => {
     try {
@@ -23,4 +23,15 @@ exports.updateAttendance = async (req, res) => {
     } catch (error) {
         res.status(500).json({ message: "some error occured", error });
     }
-}
+};
+
+exports.deleteSubject = async (req, res) => {
+    try {
+        const { subjectId } = req.body;
+        const response = await attendanceServices.deleteSubject(subjectId);
+
+        res.status(200).json({ mesage: "subject delted successfully", response });
+    } catch (error) {
+        res.status(500).json({ message: "Internal server error, please try again later" , error });
+    }
+};
