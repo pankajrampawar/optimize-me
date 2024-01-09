@@ -35,3 +35,15 @@ exports.deleteSubject = async (req, res) => {
         res.status(500).json({ message: "Internal server error, please try again later" , error });
     }
 };
+
+exports.getSubjectDetails = async (req, res) => {
+    try {
+        const subjectId = req.params.id;
+
+        const response = await attendanceServices.getSubjectDetails(subjectId);
+        
+        res.status(200).json(response);
+    } catch (error) {
+        res.status(500).json({ message: "internal server error", error });
+    }
+}

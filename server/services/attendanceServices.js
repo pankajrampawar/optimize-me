@@ -40,3 +40,13 @@ exports.deleteSubject = async (subjectId) => {
         throw new Error("unable to delete from mongo")
     }
 };
+
+exports.getSubjectDetails = async (subjectId) => {
+    try {
+        const subject = await SubjectModel.findById(subjectId);
+
+        return subject;
+    } catch (error) {
+        return error;
+    }
+}
