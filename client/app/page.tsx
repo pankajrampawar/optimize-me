@@ -1,7 +1,7 @@
-
+ ' use client '
 import React from 'react';
-import Overall from './overall';
-import SubjectWise from './subjectWise';
+import Overall from './ui/overall';
+import SubjectWise from './ui/subjectWise';
 
 export default function Home() {
   return (
