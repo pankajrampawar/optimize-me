@@ -19,11 +19,11 @@ export default function SideNav() {
                 {
                     arrayOfSideNavElements.map((element) => {
                         return (
-                            <Link href={`/${element.name}`}>
+                            <Link href={`/${element.href}`}>
                                 <li key={element.name}
                                 className={clsx('bg-navGreen py-6 text-xl font-semibold rounded-r-xl px-2',
                                     {
-                                        'underline underline-offset-4' : pathname === `/${element.name}`
+                                        'underline underline-offset-4' : pathname === element.href
                                     }
                                 )}
                                 >
