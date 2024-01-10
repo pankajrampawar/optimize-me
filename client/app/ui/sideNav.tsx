@@ -23,7 +23,7 @@ export default function SideNav() {
                                 <li key={element.name}
                                 className={clsx('bg-navGreen py-6 text-xl font-semibold rounded-r-xl px-2',
                                     {
-                                        'underline underline-offset-4' : pathname === element.href
+                                        'underline underline-offset-4' : pathname === `/${element.href}`
                                     }
                                 )}
                                 >
