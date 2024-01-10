@@ -12,9 +12,12 @@ export default function SideNav() {
 
     return (
         <main className='text-navText flex gap-2 flex-col h-screen'>
-            <div className='h-[132px] bg-navGreen flex items-end p-2 text-3xl font-bold rounded-br-xl'>
-                Optimize-me
-            </div>
+            <Link href={'/'}>
+                <div className='h-[132px] bg-navGreen flex items-end p-2 text-3xl font-bold rounded-br-xl'>
+                    Optimize-me
+                </div>
+            </Link>
+            
             <ul className='flex gap-2 flex-col'>
                 {
                     arrayOfSideNavElements.map((element) => {

@@ -12,6 +12,12 @@ const config: Config = {
         "navGreen": "rgb(5, 33, 28)",
         "navText": "rgb(210, 255, 255)",
         "background": "rgb(225, 236, 234)",
+        "attendanceCard": "rgb(22, 123, 123)",
+        "TopColor": "rgba(12, 55, 48, 1)",
+        "BottomColor": "rgba(12, 55, 48, 0.28)",
+        "CircleTop": "rgba(13, 59, 52, 1)",
+        "CircleBottom": "rgba(22, 123, 123, 1)", 
+        "CardColor": "rgb(19, 97, 96)",
       }
     },
   },
