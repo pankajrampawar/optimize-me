@@ -1,9 +1,7 @@
-' use client ';
+'use client'
 
-export default function Attendance() {
-    return (
-        <div>
-            this is attendacne part
-        </div>
-    )
+export default function attendance() {
+    return <div>
+        This is attendance part
+    </div>
 }
